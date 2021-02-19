@@ -1,0 +1,25 @@
+{
+  "name": "burger-burger",
+  "version": "1.0.0",
+  "description": "Hamburger, hamburger, hamburger, hamburger, cheezeburger",
+  "main": "server.js",
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenneration/Burger-Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenneration/Burger-Burger/issues"
+  },
+  "homepage": "https://github.com/jenneration/Burger-Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql": "^2.18.1"
+  }
+}

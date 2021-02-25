@@ -36,10 +36,13 @@ router.put("/api/burgers/:id", (req, res) => {
 
 //Add new burger
 router.post("/api/burgers", (req, res) => {
-  cat.create(["burger_name"], [req.body.burger_name], (result) => {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
-  });
+  burger.create(
+    ["burger_name", "devoured"],
+    [req.body.burger_name, req.body.devoured],
+    (result) => {
+      res.json({ id: result.insertId });
+    }
+  );
 });
 
 // router.delete('/api/burgers/:id', (req, res) => {

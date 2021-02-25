@@ -34,7 +34,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
       });
     });
+  }
 
-    //Create new burger
+  //Create new burger
+
+  const createBurgerBtn = document.getElementById("create-burger");
+
+  if (createBurgerBtn) {
+    createBurgerBtn.addEventListener("submit", (e) => {
+      const newBurger = {
+        burger_name: document.getElementById("bg").value.trim(),
+      };
+      fetch("/api/burgers", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newBurger),
+      }).then(() => {
+        document.getElementById("bg").value = "";
+        locationl.reload();
+      });
+      console.log("New burger created");
+    });
   }
 });

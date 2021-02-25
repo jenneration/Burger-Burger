@@ -13,28 +13,22 @@ const printQuestionMarks = (num) => {
   };
   
 
-  //To loop through objects in queries
+//To loop through objects in queries
   const objToSql = (ob) => {
     const arr = [];
-  
-    // Loop through the keys and push the key/value as a string int arr
     for (const key in ob) {
       let value = ob[key];
-      // Check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
-        // If string with spaces, add quotations 
         if (typeof value === 'string' && value.indexOf(' ') >= 0) {
           value = `'${value}'`;
         }
         arr.push(`${key}=${value}`);
       }
     }
-  
-    // Translate array of strings to a single comma-separated string
     return arr.toString();
   };
   
-  // Object for all our SQL statement functions.
+// Object for all our SQL statement functions.
   const orm = {
     all(tableInput, cb) {
       const queryString = `SELECT * FROM ${tableInput};`;
@@ -65,7 +59,7 @@ const printQuestionMarks = (num) => {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
+
     update(table, objColVals, condition, cb) {
       let queryString = `UPDATE ${table}`;
   
@@ -83,6 +77,7 @@ const printQuestionMarks = (num) => {
         cb(result);
       });
     },
+
     delete(table, condition, cb) {
       let queryString = `DELETE FROM ${table}`;
       queryString += ' WHERE ';
@@ -98,6 +93,6 @@ const printQuestionMarks = (num) => {
     },
   };
   
-  // Export the orm object for the model (cat.js).
+ 
   module.exports = orm;
   

@@ -15,6 +15,17 @@ li {
   background: aqua;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.create-form {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+}
+
+button.devour {
+  float: right;
+}
+
+.area-jg {
+  padding: 40px 60px;
+  margin: 25px 0;
 }

@@ -1,29 +1,31 @@
 
     
 
-  <div class="container"> 
+  <div class="headwrap"> 
+      <img src="../assets/img/Hand-drawn-burger-on-transparent-background-PNG.png" class="burger-img" alt="hand drawn burger" width=275;>
     <h1 class="header text-warning">BurgerEats</h1>
-      <img src="../assets/img/Hand-drawn-burger-on-transparent-background-PNG.png" class="burger-img" alt="hand drawn burger" width=275px;>
-s
     </div>
+
         <div class="row justify-content-md-center">
-          <div class="col-4">
+          <div class="col-sm">
             <h2 class="h2s">New Burgers</h2>
+            <hr>
               <ul>
         {{#each burger}}
         {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
+        {{> burgers/burger-block1 devoured=true}}
         {{/unless}}
         {{/each}}
       </ul>
     </div>
 
-    <div class="col-4">
+    <div class="col-sm">
       <h2 class="h2s">Chewed Burgers</h2>
+      <hr>
       <ul>
         {{#each burger}}
         {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
+        {{> burgers/burger-block2 devoured=false}}
         {{/if}}
         {{/each}}
       </ul>
@@ -32,7 +34,7 @@ s
     <form class="create-form" id="create-burger">
     <h2 class="h2s">Create Burger?</h2>
       <label for="bg"></label>
-      <input class="area-jg" type="text" id="bg" name="name">
+      <input class="area-jg" type="text" id="bg" name="name" placeholder="Burger Name..." required>
   <button class="magic" type="submit">Magic Burger-Maker Button</button>
   </form>
   </div>

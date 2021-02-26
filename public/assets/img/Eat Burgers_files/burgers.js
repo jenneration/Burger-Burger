@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
           } else {
             alert("something went wrong!");
           }
-          // console.log(`changed devour to: ${newDevour}`);
-          // console.log(id);
+          console.log(`changed devour to: ${newDevour}`);
+          console.log(id);
         });
       });
     });
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       const newBurger = {
         burger_name: document.getElementById("bg").value.trim(),
       };
+
       fetch("/api/burgers", {
         method: "POST",
         headers: {
@@ -55,29 +56,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("bg").value = "";
         locationl.reload();
       });
-
       console.log("New burger created");
     });
   }
-
-  // //Delete Burgers/Make room for more
-  const deleteBurgerBtns = document.querySelectorAll(".delete");
-
-  // Set up the event listeners for each delete button
-  deleteBurgerBtns.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const id = e.target.getAttribute("data-id");
-      console.log("Click");
-      // Send the delete request
-      fetch(`/api/burgers/${id}`, {
-        method: "DELETE",
-      }).then((res) => {
-        console.log("Hello");
-        console.log(`Deleted burger: ${id}`);
-
-        // Reload the page
-        location.reload();
-      });
-    });
-  });
 });
+
+//Delete Burgers/Make room for more
+// const deleteBurgerBtns = document.querySelectorAll(".delete-burger");
+
+// deleteBurgerBtns.forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     const id = e.target.getAttribute("data-id");
+
+//     fetch(`/api/burgers/${id}`, {
+//       method: "DELETE",
+//     }).then((res) => {
+//       console.log(res);
+//       console.log(`Deleted burger: ${id}`);
+//       location.reload();
+//     });
+//   });
+// });

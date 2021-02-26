@@ -1,7 +1,47 @@
+/* font-family: 'Balsamiq Sans', cursive;
+font-family: 'Roboto Slab', serif; */
+body {
+  background-color: #fafafa;
+}
+.container-jg {
+  border: dashed black 2px;
+}
+.header {
+  text-align: center;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 4px 4px #000;
+}
+
+.h2s {
+  text-align: center;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 700;
+  font-size: 1.5;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 3px 4px #606060;
+  color: #ff4c00;
+}
+
+body {
+  font-family: "Roboto Slab, serif";
+}
+
+.burger-img {
+  display: block;
+  margin: 25px auto 25px auto;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #c5c2bf;
+  background-color: lightgray;
   list-style: none;
 }
 
@@ -16,7 +56,7 @@ li {
 }
 
 .create-form {
-  margin-top: 50px;
+  margin-top: 60px;
   display: block;
   text-align: center;
 }
@@ -25,7 +65,20 @@ button.devour {
   float: right;
 }
 
+.magic {
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
+}
+
+.magic:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
 .area-jg {
-  padding: 40px 60px;
-  margin: 25px 0;
+  width: 200px;
 }

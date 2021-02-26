@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   //Create new burger
-
   const createBurgerBtn = document.getElementById("create-burger");
 
   if (createBurgerBtn) {

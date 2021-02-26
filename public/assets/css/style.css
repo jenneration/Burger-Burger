@@ -1,32 +1,44 @@
 /* font-family: 'Balsamiq Sans', cursive;
 font-family: 'Roboto Slab', serif; */
 body {
-  /* background-color: rgb(68, 54, 54); */
+  background-color: rgb(15, 10, 10);
   background-image: url(../img/blackboard-texture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* font-family: "Roboto Slab, serif"; */
   font-family: "Balsamiq Sans", cursive;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: white;
 }
 .container-jg {
   border: dashed black 2px;
 }
 
+.wrapper {
+  margin: auto;
+  width: 70%;
+}
+
+.bigwrap {
+  margin: 30px auto 50px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+
 .headwrap {
   margin: auto;
   width: 90%;
   padding: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
+
 .header {
   display: inline;
   margin-left: 40px;
   text-align: center;
   font-family: "Balsamiq Sans", cursive;
   font-weight: 700;
-  font-size: 7rem;
+  font-size: 5rem;
   letter-spacing: 3px;
   margin-top: 20px;
   -webkit-text-stroke-width: 4px;
@@ -34,10 +46,25 @@ body {
   text-shadow: 4px 4px #e9e2e2;
 }
 
+.tagline {
+  display: inline-block;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 1rem;
+  margin-left: 40px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
 .burger-img {
+  float: left;
   display: inline;
   margin: 25px auto 25px auto;
   background-color: rgb(240, 186, 11);
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .h2s {
@@ -57,7 +84,7 @@ li {
   list-style: none;
   border-radius: 4px;
   height: 40px;
-  width: 500px;
+  width: 400px;
 }
 
 .label {
@@ -71,7 +98,7 @@ li {
 }
 
 .create-form {
-  margin-top: 80px;
+  margin: 80px auto 40px;
   display: block;
   text-align: center;
 }
@@ -83,7 +110,7 @@ button.delete {
 }
 
 .area-jg {
-  height: 50px;
+  height: 40px;
   border-radius: 4px;
   border: solid lightgrey 4px;
   padding: 8px 16px;
@@ -122,5 +149,44 @@ button.delete {
 @keyframes slidebg {
   to {
     background-position: 20vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bigwrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .header {
+    display: block;
+    text-align: center;
+    font-family: "Balsamiq Sans", cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 2px #e9e2e2;
+  }
+  .burger-img {
+    width: 200px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .h2s {
+    text-align: center;
+  }
+
+  .create-form {
+    margin-top: 15px;
   }
 }

@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const burger = require("../models/burger.js");
 
-// Create all our routes and set up logic within those routes where required.
+// READ all burgers in DB
 router.get("/", (req, res) => {
   burger.all((data) => {
     const hbsObject = {
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   });
 });
 
-//Update burger devouredState to devoured = true
+//UPDATE burger devouredState to devoured = true
 router.put("/api/burgers/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
   // console.log("condition", condition);
@@ -32,7 +32,7 @@ router.put("/api/burgers/:id", (req, res) => {
   // console.log(req.body.devoured);
 });
 
-//Add new burger
+//CREATE new burger
 router.post("/api/burgers", (req, res) => {
   burger.create(
     ["burger_name", "devoured"],
@@ -43,7 +43,7 @@ router.post("/api/burgers", (req, res) => {
   );
 });
 
-//Delete
+//DELETE
 router.delete("/api/burgers/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
 

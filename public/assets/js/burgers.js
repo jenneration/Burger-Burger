@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }).then((res) => {
         console.log("Hello");
         console.log(`Deleted burger: ${id}`);
-        ge;
         location.reload();
       });
     });

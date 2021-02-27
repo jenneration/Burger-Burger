@@ -77,6 +77,7 @@ body {
   text-shadow: 3px 4px #e9e2e2;
   color: #ff4c00;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 li {
@@ -151,6 +152,10 @@ button.delete {
   to {
     background-position: 20vw;
   }
+}
+
+.burg-btn {
+  font-size: 13px;
 }
 
 @media only screen and (max-width: 600px) {

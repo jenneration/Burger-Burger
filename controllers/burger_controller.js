@@ -47,7 +47,7 @@ router.post("/api/burgers", (req, res) => {
 router.delete("/api/burgers/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
 
-  // console.log(id);
+  console.log(condition);
   burger.delete(condition, (result) => {
     if (result.affectedRows === 0) {
       return res.status(404).end();

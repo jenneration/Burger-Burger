@@ -6,18 +6,15 @@ _**Hamburger, hamburger, hamburger, hamburger, cheezeburger!**_
 
 - [Description](#Description)
 - [Technologies](#Technologies)
-- [Installation](#Installation)
 - [Screenshots](#Screenshots)
 - [Repository](#Repository)
 - [Deployment](#Deployment)
 
 ## Description
 
-A bitty CRUD app that let's you eat, create, or delete the burger of choice. Following the MVC design patter, this app utilizes several techonologies, an ORM, and a templating engine to generate HTML.
+A bitty CRUD app that let's you eat, create, or delete (or reorder!) the burger of choice. Following the MVC design pattern, this app utilizes several techonologies, an ORM, and a templating engine to generate HTML.
 
 ## Technology
-
-Technologies utilized include
 
 - Node.js
 - Express
@@ -27,13 +24,6 @@ Technologies utilized include
   - [Express handlebars](https://www.npmjs.com/package/express-handlebars)
 - Bootstrap
 - Google Fonts
-
-## Installation
-
-To run this application you must have **Node.js** installed. Then:
-
-1. From the terminal intall dependancies `npm install` or `npm i` and `ENTER`.
-2. Once "installed", be sure that all npm packages listed above are in your `node_modules` folder.
 
 ## Screenshot
 
@@ -45,5 +35,4 @@ To run this application you must have **Node.js** installed. Then:
 
 ## Deployment
 
-- Heroku
-  ––
+- [Heroku](https://sheltered-brushlands-74287.herokuapp.com)

@@ -10,6 +10,11 @@ body {
   font-size: 1rem;
   color: white;
 }
+
+/* Prevents page "jump" on reload using min height displayed on ChromeDev inspect */
+.container {
+  min-height: 760px;
+}
 .container-jg {
   border: dashed black 2px;
 }
